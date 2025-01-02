@@ -15,7 +15,7 @@ https://localhost.com {
 }
 ```
 
-Cloudflare 不写 https rewrites, DNS 分配主机
+Register the domain name, do not enable CDN acceleration and rewrites in the Cloudflare management interface, and finally assign the hosting DNS.Cloudflare 不写 https rewrites, DNS 分配主机
 
 ```shell
 systemctl enable caddy
@@ -23,4 +23,4 @@ service caddy start
 caddy run --config Caddyfile
 ```
 
-最后写一个 service 文件，启动即可
+Write a service file for easy operation and maintenance.
